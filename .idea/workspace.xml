@@ -7,52 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cadaf4a-0b76-47ce-9ed9-d1148f9b99c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jp/job/PraiseDataSaveDBJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jp/mq/MoodConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jp/mq/MoodProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/activemq.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/redis.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-jms.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-redis.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/jp/test/BaseJunit4Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/com/jp/test/RedisTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jp/test/activeMQ_test/JMSConsumer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jp/test/activeMQ_test/JMSProducer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jp/controller/MoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jp/controller/MoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jp/dao/MoodDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jp/dao/MoodDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jp/service/MoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jp/service/MoodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jp/service/impl/MoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jp/service/impl/MoodServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jp/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jp/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MoodMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MoodMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mood.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mood.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/TestFind.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jp/controller/MoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jp/controller/MoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jp/dao/MoodDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jp/dao/MoodDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jp/service/MoodService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jp/service/MoodService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jp/service/impl/MoodServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jp/service/impl/MoodServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jp/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jp/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/MoodMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/MoodMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/com/jp/controller/MoodController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/com/jp/controller/MoodController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/com/jp/dao/MoodDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/com/jp/dao/MoodDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/com/jp/service/MoodService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/com/jp/service/MoodService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/com/jp/service/impl/MoodServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/com/jp/service/impl/MoodServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/com/jp/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/com/jp/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/mapper/MoodMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/mapper/MoodMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/lib/spring-aop-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/lib/spring-beans-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/lib/spring-context-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/lib/spring-core-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/lib/spring-expression-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/lib/spring-jcl-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/lib/spring-jdbc-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/lib/spring-test-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/lib/spring-tx-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/lib/spring-web-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/lib/spring-webmvc-5.0.2.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/views/mood.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/views/mood.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/activemq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/activemq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/redis.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-jms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-jms.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/jp/test/activeMQ_test/JMSConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/jp/test/activeMQ_test/JMSConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/jp/test/activeMQ_test/JMSProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/jp/test/activeMQ_test/JMSProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/activemq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/activemq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/redis.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring-jms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-jms.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/activemq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/activemq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/redis.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/spring-jms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/spring-jms.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,12 +131,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat">
-    <configuration name="MoodTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jp.test.MoodTest" />
+    <configuration name="JMSConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jp.test.activeMQ_test.JMSConsumer" />
       <module name="ssm_hps" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.jp.test.*" />
+          <option name="PATTERN" value="com.jp.test.activeMQ_test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JMSProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jp.test.activeMQ_test.JMSProducer" />
+      <module name="ssm_hps" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jp.test.activeMQ_test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -214,22 +196,6 @@
       <option name="PACKAGE_NAME" value="com.jp.test" />
       <option name="MAIN_CLASS_NAME" value="com.jp.test.RedisTest" />
       <option name="METHOD_NAME" value="testRedis" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceTest.run1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ssm_hps" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jp.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jp.test" />
-      <option name="MAIN_CLASS_NAME" value="com.jp.test.ServiceTest" />
-      <option name="METHOD_NAME" value="run1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -309,19 +275,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.UserTest" />
-      <item itemvalue="Application.MoodTest" />
-      <item itemvalue="JUnit.ServiceTest.run1" />
       <item itemvalue="JUnit.RedisTest" />
       <item itemvalue="JUnit.RedisTest.testRedis" />
       <item itemvalue="Tomcat Server.Tomcat" />
+      <item itemvalue="Application.JMSProducer" />
+      <item itemvalue="Application.JMSConsumer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JMSConsumer" />
+        <item itemvalue="Application.JMSProducer" />
         <item itemvalue="JUnit.RedisTest.testRedis" />
         <item itemvalue="Application.UserTest" />
         <item itemvalue="JUnit.RedisTest" />
-        <item itemvalue="Application.MoodTest" />
-        <item itemvalue="JUnit.ServiceTest.run1" />
       </list>
     </recent_temporary>
   </component>
@@ -369,7 +335,7 @@
       <workItem from="1575027780369" duration="11441000" />
       <workItem from="1575041231470" duration="4202000" />
       <workItem from="1575111455836" duration="13210000" />
-      <workItem from="1575177205281" duration="13734000" />
+      <workItem from="1575177205281" duration="19059000" />
     </task>
     <servers />
   </component>
