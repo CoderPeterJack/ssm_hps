@@ -2,10 +2,13 @@ package com.jp.service.impl;
 
 import com.jp.dao.MoodDao;
 import com.jp.dao.UserDao;
+import com.jp.dao.UserMoodPraiseRelDao;
 import com.jp.dto.MoodDTO;
 import com.jp.model.Mood;
 import com.jp.model.User;
+import com.jp.model.UserMoodPraiseRel;
 import com.jp.service.MoodService;
+import com.sun.media.sound.ModelDestination;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -27,12 +30,14 @@ public class MoodServiceImpl implements MoodService {
     private MoodDao moodDao;
     @Resource
     private UserDao userDao;
+    @Resource
+    private UserMoodPraiseRelDao userMoodPraiseRelDao;
 
     public List<MoodDTO> findAll(){
         //查询所有的说说
         List<Mood> moodList=moodDao.findAll();
         //转换为DTO对象
-        System.out.println("mood业务层执行成功");
+        //System.out.println("mood业务层执行成功");
         return converMode12DTO(moodList);
     }
 
@@ -53,5 +58,26 @@ public class MoodServiceImpl implements MoodService {
             moodDTO.setUserAccount(user.getAccount());
         }
         return moodDTOList;
+    }
+
+    public boolean praiseMood(Integer userId,Integer moodId){
+        //保持关联关系
+        UserMoodPraiseRel userMoodPraiseRel=new UserMoodPraiseRel();
+        userMoodPraiseRel.setUserId(userId);
+        userMoodPraiseRel.setMoodId(moodId);
+        userMoodPraiseRelDao.save(userMoodPraiseRel);
+        //更新说说的点赞数量
+        Mood mood=this.findById(moodId);
+        mood.setPraiseNum(mood.getPraiseNum()+1);
+        this.update(mood);
+        return Boolean.TRUE;
+    }
+
+    public boolean update(Mood mood){
+        return moodDao.update(mood);
+    }
+
+    public Mood findById(Integer id){
+        return moodDao.findById(id);
     }
 }

@@ -1,6 +1,7 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
         pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt"%>
 <!DOCTYPE HTML>
 <head>
     <title>高并发点赞</title>
@@ -20,7 +21,9 @@
         <b>点赞数：</b><span id="praise_num">${mood.praiseNum}</span><br>
 
         <div style="margin-left: 350px">
-            <a id="praise">赞</a>
+<%--重点，每次点赞都会向后端发起请求，并把参数moodId和userId传递给后端--%>
+            <a id="praise" href="/mood/${mood.id}/praise?userId=
+            ${mood.userId}">赞</a>
         </div>
     </c:forEach>
 </div>

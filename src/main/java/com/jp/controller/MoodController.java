@@ -1,11 +1,15 @@
 package com.jp.controller;
 
 import com.jp.dto.MoodDTO;
+import com.jp.model.Mood;
 import com.jp.service.MoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -29,5 +33,17 @@ public class MoodController {
         List<MoodDTO> moodDTOList = moodService.findAll();
         model.addAttribute("moods", moodDTOList);
         return "mood";
+    }
+
+    @GetMapping(value ="/{moodId}/praise")
+    public String prasie(Model model, @PathVariable(value="moodId")
+                         Integer moodId, @RequestParam(value = "useId",required=false)Integer userId){
+        boolean isPraise=moodService.praiseMood(userId,moodId);
+
+        List<MoodDTO> moodDTOList=moodService.findAll();
+        model.addAttribute("moods",moodDTOList);
+        model.addAttribute("isPraise",isPraise);
+        return "mood";
+
     }
 }
