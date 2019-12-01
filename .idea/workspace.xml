@@ -6,23 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cadaf4a-0b76-47ce-9ed9-d1148f9b99c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jp/test/activeMQ_test/JMSConsumer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jp/test/activeMQ_test/JMSProducer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/activemq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/activemq.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/redis.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-jms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-jms.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/jp/test/activeMQ_test/JMSConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/jp/test/activeMQ_test/JMSConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/jp/test/activeMQ_test/JMSProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/jp/test/activeMQ_test/JMSProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/activemq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/activemq.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/redis.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-jms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring-jms.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/activemq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/activemq.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/redis.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/redis.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/spring-jms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssm_hps/WEB-INF/classes/spring-jms.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2cadaf4a-0b76-47ce-9ed9-d1148f9b99c7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,7 +319,7 @@
       <workItem from="1575027780369" duration="11441000" />
       <workItem from="1575041231470" duration="4202000" />
       <workItem from="1575111455836" duration="13210000" />
-      <workItem from="1575177205281" duration="19059000" />
+      <workItem from="1575177205281" duration="19301000" />
     </task>
     <servers />
   </component>
