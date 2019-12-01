@@ -40,4 +40,10 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <property name="basePackage" value="com.jp.dao"/>
     </bean>
+
+<!--    导入spring-redis.xml配置-->
+    <import resource="spring-redis.xml"/>
+
+    <!--    导入spring-jms.xml配置-->
+    <import resource="spring-jms.xml"/>
 </beans>

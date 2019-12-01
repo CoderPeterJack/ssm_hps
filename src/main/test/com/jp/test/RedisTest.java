@@ -1,10 +1,23 @@
 package com.jp.test;
 
-/**
- * @program: ssm_hps
- * @description: redis缓存测试
- * @author: CoderPengJiang
- * @create: 2019-11-30 22:40
+import org.junit.Test;
+import org.springframework.data.redis.core.RedisTemplate;
+
+import javax.annotation.Resource;
+
+/** redis缓存测试
+ * @author Ay
+ * @create 2018/07/08
  **/
-public class RedisTest {
+public class RedisTest extends BaseJunit4Test{
+
+    @Resource
+    private RedisTemplate redisTemplate;
+
+    @Test
+    public void testRedis(){
+        redisTemplate.opsForValue().set("name", "jp");
+        String name = (String) redisTemplate.opsForValue().get("name");
+        System.out.println("value of name is:" + name);
+    }
 }

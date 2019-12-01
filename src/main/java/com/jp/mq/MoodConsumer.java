@@ -1,7 +1,6 @@
-package com.ay.mq;
+package com.jp.mq;
 
-import com.ay.dto.MoodDTO;
-import com.ay.model.Mood;
+import com.jp.dto.MoodDTO;
 import org.apache.activemq.command.ActiveMQObjectMessage;
 import org.apache.log4j.Logger;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -19,7 +18,7 @@ import javax.jms.MessageListener;
 @Component
 public class MoodConsumer implements MessageListener{
 
-    private static final String PRAISE_HASH_KEY = "springmv.mybatis.boot.mood.id.list.key";
+    private static final String PRAISE_HASH_KEY = "ssm_hps.mood.id.list.key";
 
     @Resource
     private RedisTemplate redisTemplate;

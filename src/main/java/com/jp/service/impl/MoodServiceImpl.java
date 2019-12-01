@@ -7,13 +7,18 @@ import com.jp.dto.MoodDTO;
 import com.jp.model.Mood;
 import com.jp.model.User;
 import com.jp.model.UserMoodPraiseRel;
+import com.jp.mq.MoodProducer;
 import com.jp.service.MoodService;
+import com.jp.service.UserService;
 import com.sun.media.sound.ModelDestination;
+import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
+import javax.jms.Destination;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -32,6 +37,16 @@ public class MoodServiceImpl implements MoodService {
     private UserDao userDao;
     @Resource
     private UserMoodPraiseRelDao userMoodPraiseRelDao;
+
+    //redis缓存点赞,高效访问redis数据的方案
+    @Resource
+    private RedisTemplate redisTemplate;
+
+    //消息队列
+    @Resource
+    private MoodProducer moodProducer;
+    //队列
+    private static Destination destination = new ActiveMQQueue("jp.queue.high.concurrency.praise");
 
     public List<MoodDTO> findAll(){
         //查询所有的说说
@@ -60,6 +75,7 @@ public class MoodServiceImpl implements MoodService {
         return moodDTOList;
     }
 
+    //传统点赞
     public boolean praiseMood(Integer userId,Integer moodId){
         //保持关联关系
         UserMoodPraiseRel userMoodPraiseRel=new UserMoodPraiseRel();
@@ -80,4 +96,53 @@ public class MoodServiceImpl implements MoodService {
     public Mood findById(Integer id){
         return moodDao.findById(id);
     }
+
+    //redis缓存点赞
+    //key命名规范：项目名称+模板名称+具体内容
+    private static final String PRAISE_HASH_KEY = "ssm_hps.mood.id.list.key";
+
+    public boolean praiseMoodForRedis(Integer userId, Integer moodId) {
+        //修改为异步处理方式
+        MoodDTO moodDTO=new MoodDTO();
+        moodDTO.setUserId(userId);
+        moodDTO.setId(moodId);
+        //发送消息
+        moodProducer.sendMessage(destination,moodDTO);
+     //  //1.存放到hashset中
+     //  redisTemplate.opsForSet().add(PRAISE_HASH_KEY , moodId);
+     //  //2.存放到set中
+     //  redisTemplate.opsForSet().add(moodId,userId);
+        return false;
+    }
+
+    @Resource
+    private UserService userService;
+
+    public List<MoodDTO> findAllForRedis() {
+        List<Mood> moodList = moodDao.findAll();
+        if(CollectionUtils.isEmpty(moodList)){
+            return Collections.EMPTY_LIST;
+        }
+        List<MoodDTO> moodDTOList = new ArrayList<MoodDTO>();
+        for(Mood mood: moodList){
+            MoodDTO moodDTO = new MoodDTO();
+            moodDTO.setId(mood.getId());
+            moodDTO.setUserId(mood.getUserId());
+            //right = 总点赞数量 ： 数据库的点赞数量 + redis的点赞数量
+            moodDTO.setPraiseNum(mood.getPraiseNum() + redisTemplate.opsForSet().size(mood.getId()).intValue());
+            moodDTO.setPublishTime(mood.getPublishTime());
+            moodDTO.setContent(mood.getContent());
+            //通过userID查询用户
+            User user =  userService.find(mood.getUserId());
+            //用户名
+            moodDTO.setUserName(user.getName());
+            //账户
+            moodDTO.setUserAccount(user.getAccount());
+            moodDTOList.add(moodDTO);
+        }
+        return moodDTOList;
+    }
+
+
+
 }

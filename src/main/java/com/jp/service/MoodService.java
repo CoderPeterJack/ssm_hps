@@ -13,4 +13,7 @@ public interface MoodService {
     boolean praiseMood(Integer userId,Integer moodId);
     boolean update(@Param("mood") Mood mood);
     Mood findById(Integer id);
+    //redis缓存点赞
+     boolean praiseMoodForRedis(Integer userId,Integer moodId);
+     List<MoodDTO> findAllForRedis();
 }

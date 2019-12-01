@@ -22,8 +22,11 @@
 
         <div style="margin-left: 350px">
 <%--重点，每次点赞都会向后端发起请求，并把参数moodId和userId传递给后端--%>
-            <a id="praise" href="/mood/${mood.id}/praise?userId=
-            ${mood.userId}">赞</a>
+<%--            <a id="praise" href="/mood/${mood.id}/praise?userId=--%>
+<%--            ${mood.userId}">赞</a>--%>
+<%--            引入redis缓存的点赞请求--%>
+            <a id="praise" href="/mood/${mood.id}/praiseForRedis?userId=
+                          ${mood.userId}">赞</a>
         </div>
     </c:forEach>
 </div>
